@@ -1,7 +1,5 @@
 from django.db import models
 from oc_letting_site.models import Address
-from django.core.validators import MaxValueValidator, MinLengthValidator
-from django.contrib.auth.models import User
 
 
 class Letting(models.Model):
