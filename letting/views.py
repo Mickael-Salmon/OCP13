@@ -13,6 +13,16 @@ def lettings_index(request):
 
 
 def letting(request, letting_id):
+    """
+    View function that retrieves a letting object with the given ID and renders it to the letting.html template.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+        letting_id (int): The ID of the letting object to retrieve.
+
+    Returns:
+        HttpResponse: The HTTP response object that contains the rendered letting.html template.
+    """
     letting = Letting.objects.get(id=letting_id)
     context = {
         "title": letting.title,

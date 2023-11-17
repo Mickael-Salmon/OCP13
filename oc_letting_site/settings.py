@@ -30,6 +30,13 @@ INSTALLED_APPS = [
     "oc_letting_site",
     "profiles",
     "letting",
+    "django_nose",
+]
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'  # Tell nose to measure coverage on specific apps
+NOSE_ARGS = [
+    '--with-coverage',  # Specify that you want a coverage report
+    '--cover-package=oc_letting_site',  # Replace "your_app_name" with the name of the app you want to cover
+    '--cover-html', # Supports HTML outputs
 ]
 
 MIDDLEWARE = [
