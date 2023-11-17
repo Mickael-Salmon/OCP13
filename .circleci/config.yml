@@ -1,0 +1,21 @@
+# Utilisation de la version 2.1 du moteur de pipeline CircleCI
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.9  # Image Docker pour l'environnement d'exécution
+    steps:
+      - checkout  # Récupération du code source du dépôt
+      - run:
+          name: Install Dependencies  # Installation des dépendances
+          command: pip install -r requirements.txt
+      - run:
+          name: Run Django Tests  # Exécution des tests
+          command: python manage.py test
+
+workflows:
+  version: 2
+  build_and_test:  # Définition du workflow
+    jobs:
+      - build  # Exécution du job "build"
