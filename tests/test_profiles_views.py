@@ -12,15 +12,13 @@ class ProfileViewTest(TestCase):
         )
         self.profile = Profile.objects.create(
             user=self.user,
-            bio='Test bio',
-            location='Test location',
-            birth_date='2000-01-01'
+            favorite_city='Test City'
         )
+
 
     def test_profile_view(self):
         response = self.client.get(reverse('profile', args=['testuser']))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'profile.html')
-        self.assertContains(response, 'Test bio')
-        self.assertContains(response, 'Test location')
-        self.assertContains(response, '2000-01-01')
+        self.assertContains(response, self.user.username)
+        self.assertContains(response, self.profile.favorite_city)

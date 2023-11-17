@@ -6,6 +6,7 @@ class LettingModelTest(TestCase):
     def setUpTestData(cls):
         # Set up non-modified objects used by all test methods
         address = Address.objects.create(
+            number=1,
             street='123 Main St',
             city='Anytown',
             state='CA',
