@@ -4,6 +4,8 @@ from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,6 +33,7 @@ INSTALLED_APPS = [
     "profiles",
     "letting",
     "django_nose",
+    "django_coverage",
 ]
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'  # Tell nose to measure coverage on specific apps
 NOSE_ARGS = [
