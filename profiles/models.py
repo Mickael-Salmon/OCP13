@@ -10,7 +10,6 @@ class Profile(models.Model):
         user (User): The user associated with this profile.
         favorite_city (str): The user's favorite city.
     """
-
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="profile"
     )
