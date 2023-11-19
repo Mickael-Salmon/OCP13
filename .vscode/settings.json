@@ -2,5 +2,6 @@
     "[python]": {
         "editor.defaultFoldingRangeProvider": "ms-python.black-formatter",
         "editor.defaultFormatter": "ms-python.black-formatter"
-    }
+    },
+    "esbonio.sphinx.confDir": ""
 }
