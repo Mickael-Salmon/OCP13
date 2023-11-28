@@ -17,19 +17,19 @@ class LettingModelTest(TestCase):
     def test_title_label(self):
         letting = Letting.objects.get(id=1)
         field_label = letting._meta.get_field('title').verbose_name
-        self.assertEquals(field_label, 'title')
+        self.assertEqual(field_label, 'title')
 
     def test_address_label(self):
         letting = Letting.objects.get(id=1)
         field_label = letting._meta.get_field('address').verbose_name
-        self.assertEquals(field_label, 'address')
+        self.assertEqual(field_label, 'address')
 
     def test_title_max_length(self):
         letting = Letting.objects.get(id=1)
         max_length = letting._meta.get_field('title').max_length
-        self.assertEquals(max_length, 256)
+        self.assertEqual(max_length, 256)
 
     def test_object_name_is_title(self):
         letting = Letting.objects.get(id=1)
         expected_object_name = f'{letting.title}'
-        self.assertEquals(expected_object_name, str(letting))
+        self.assertEqual(expected_object_name, str(letting))
