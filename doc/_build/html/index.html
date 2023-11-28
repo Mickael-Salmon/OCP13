@@ -1,0 +1,291 @@
+
+
+<!doctype html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Welcome to OC Lettings Site’s documentation! &#8212; OC Lettings Site 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="_static/bizstyle.css?v=532c1bf3" />
+    
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">OC Lettings Site 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to OC Lettings Site’s documentation!</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="welcome-to-oc-lettings-site-s-documentation">
+<h1>Welcome to OC Lettings Site’s documentation!<a class="headerlink" href="#welcome-to-oc-lettings-site-s-documentation" title="Link to this heading">¶</a></h1>
+<p>Le projet OCP13 est une application web Django conçue pour …</p>
+</section>
+<section id="objectifs">
+<h1>Objectifs<a class="headerlink" href="#objectifs" title="Link to this heading">¶</a></h1>
+<section id="objectif-1-ameliorez-l-architecture-modulaire">
+<h2>Objectif 1 - Améliorez l’architecture modulaire<a class="headerlink" href="#objectif-1-ameliorez-l-architecture-modulaire" title="Link to this heading">¶</a></h2>
+<p><strong>Penser à la réusabilité et la maintenance :</strong>
+Chaque application Django (oc_letting_site, profile, letting) devrait être conçue pour être aussi indépendante que possible.
+Cela facilite la réutilisation dans d’autres projets et simplifie la maintenance.</p>
+<p><strong>Tests Unitaires :</strong>
+S’assurer que chaque application a ses propres tests unitaires pour vérifier son bon fonctionnement de manière isolée.</p>
+</section>
+<section id="objectif-2-reduire-la-dette-technique-et-les-problemes-sur-le-projet">
+<h2>Objectif 2 - Réduire la dette technique et les problèmes sur le projet<a class="headerlink" href="#objectif-2-reduire-la-dette-technique-et-les-problemes-sur-le-projet" title="Link to this heading">¶</a></h2>
+<p><strong>Utilisation de linters et formatters :</strong>
+Des outils comme Flake8, Black et isort peuvent grandement améliorer la qualité et la cohérence du code.</p>
+<p><strong>Attention aux faux positifs en couverture de test :</strong>
+Parfois, avoir une couverture de test élevée ne signifie pas que tous les cas sont bien testés.
+Nous visons donc une couverture significative qui teste réellement les fonctionnalités clés.</p>
+</section>
+<section id="objectif-3-surveiller-l-application-avec-sentry">
+<h2>Objectif 3 - Surveiller l’application avec Sentry<a class="headerlink" href="#objectif-3-surveiller-l-application-avec-sentry" title="Link to this heading">¶</a></h2>
+<p><strong>Environnements de staging et production :</strong>
+Sentry est bien configuré différemment pour les environnements de staging et de production pour éviter la confusion dans les rapports d’erreurs.
+<strong>Alertes Proactives :</strong>
+Configuration des alertes pour être informé en temps réel des problèmes critiques.</p>
+</section>
+<section id="objectif-4-mise-en-place-le-pipeline-ci-cd-et-le-deploiement">
+<h2>Objectif 4 - Mise en place le pipeline CI/CD et le déploiement<a class="headerlink" href="#objectif-4-mise-en-place-le-pipeline-ci-cd-et-le-deploiement" title="Link to this heading">¶</a></h2>
+<p><strong>Automatisation des tests :</strong>
+La CI exécute tous les tests automatiquement et fournit des retours clairs en cas d’échec.
+<strong>Gestion des secrets et variables d’environnement :</strong>
+Utilisation de Docker et Docker Compose pour gérer les secrets et les variables d’environnement.</p>
+</section>
+</section>
+<section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<section id="prerequis">
+<h2>Prérequis<a class="headerlink" href="#prerequis" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Python 3.9.x</p></li>
+<li><p>Django 3.0.x</p></li>
+<li><p>Contenu de requirements.txt</p></li>
+<li></li>
+</ul>
+</section>
+<section id="etapes-d-installation">
+<h2>Étapes d’Installation<a class="headerlink" href="#etapes-d-installation" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Fork et Cloner le dépôt :</p></li>
+</ol>
+<p><strong>Fork du projet :</strong>
+Depuis GitHub, utilisation de la fonction “Fork” sur la page du projet.</p>
+<p><strong>Clone du projet :</strong></p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/Mickael-Salmon/OCP13
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic">
+<li><p>Installer un environnement virtuel et les dépendances :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</pre></div>
+</div>
+</li>
+<li><p>Lancer l’application pour déterminer le bon fonctionnement du Fork initial :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver
+</pre></div>
+</div>
+</li>
+<li><p>Se connecter à l’application :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>http://localhost:8000/
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="creation-de-3-applications-distinctes">
+<h2>Création de 3 applications distinctes<a class="headerlink" href="#creation-de-3-applications-distinctes" title="Link to this heading">¶</a></h2>
+</section>
+</section>
+<section id="guide-de-demarrage-rapide">
+<h1>Guide de Démarrage Rapide<a class="headerlink" href="#guide-de-demarrage-rapide" title="Link to this heading">¶</a></h1>
+<p>Pour lancer l’application en mode développement :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>manage.py<span class="w"> </span>runserver
+</pre></div>
+</div>
+</section>
+<section id="structure-de-l-application">
+<h1>Structure de l’Application<a class="headerlink" href="#structure-de-l-application" title="Link to this heading">¶</a></h1>
+<section id="applications-django">
+<h2>Applications Django<a class="headerlink" href="#applications-django" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">letting</span></code></p>
+<ul>
+<li><p>Description de <code class="docutils literal notranslate"><span class="pre">letting</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">profiles</span></code></p>
+<ul>
+<li><p>Description de <code class="docutils literal notranslate"><span class="pre">profiles</span></code></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oc_letting_site</span></code></p>
+<ul>
+<li><p>Description de <code class="docutils literal notranslate"><span class="pre">oc_letting_site</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="modeles-de-donnees">
+<h2>Modèles de Données<a class="headerlink" href="#modeles-de-donnees" title="Link to this heading">¶</a></h2>
+<section id="modele-letting">
+<h3>Modèle <code class="docutils literal notranslate"><span class="pre">Letting</span></code><a class="headerlink" href="#modele-letting" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Champ 1</p></li>
+<li><p>Champ 2</p></li>
+</ul>
+</section>
+<section id="modele-profile">
+<h3>Modèle <code class="docutils literal notranslate"><span class="pre">Profile</span></code><a class="headerlink" href="#modele-profile" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Champ A</p></li>
+<li><p>Champ B</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="guide-d-utilisation">
+<h1>Guide d’Utilisation<a class="headerlink" href="#guide-d-utilisation" title="Link to this heading">¶</a></h1>
+<section id="fonctionnalites-principales">
+<h2>Fonctionnalités Principales<a class="headerlink" href="#fonctionnalites-principales" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Fonctionnalité 1</p></li>
+<li><p>Fonctionnalité 2</p></li>
+</ul>
+</section>
+<section id="exemples-d-utilisation">
+<h2>Exemples d’Utilisation<a class="headerlink" href="#exemples-d-utilisation" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Exemple 1</p></li>
+<li><p>Exemple 2</p></li>
+</ol>
+</section>
+</section>
+<section id="deploiement">
+<h1>Déploiement<a class="headerlink" href="#deploiement" title="Link to this heading">¶</a></h1>
+<section id="environnement-de-production">
+<h2>Environnement de Production<a class="headerlink" href="#environnement-de-production" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Serveur Web</p></li>
+<li><p>Base de données</p></li>
+</ul>
+</section>
+<section id="etapes-de-deploiement">
+<h2>Étapes de Déploiement<a class="headerlink" href="#etapes-de-deploiement" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Étape 1</p></li>
+<li><p>Étape 2</p></li>
+</ol>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Welcome to OC Lettings Site’s documentation!</a></li>
+<li><a class="reference internal" href="#objectifs">Objectifs</a><ul>
+<li><a class="reference internal" href="#objectif-1-ameliorez-l-architecture-modulaire">Objectif 1 - Améliorez l’architecture modulaire</a></li>
+<li><a class="reference internal" href="#objectif-2-reduire-la-dette-technique-et-les-problemes-sur-le-projet">Objectif 2 - Réduire la dette technique et les problèmes sur le projet</a></li>
+<li><a class="reference internal" href="#objectif-3-surveiller-l-application-avec-sentry">Objectif 3 - Surveiller l’application avec Sentry</a></li>
+<li><a class="reference internal" href="#objectif-4-mise-en-place-le-pipeline-ci-cd-et-le-deploiement">Objectif 4 - Mise en place le pipeline CI/CD et le déploiement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#prerequis">Prérequis</a></li>
+<li><a class="reference internal" href="#etapes-d-installation">Étapes d’Installation</a></li>
+<li><a class="reference internal" href="#creation-de-3-applications-distinctes">Création de 3 applications distinctes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#guide-de-demarrage-rapide">Guide de Démarrage Rapide</a></li>
+<li><a class="reference internal" href="#structure-de-l-application">Structure de l’Application</a><ul>
+<li><a class="reference internal" href="#applications-django">Applications Django</a></li>
+<li><a class="reference internal" href="#modeles-de-donnees">Modèles de Données</a><ul>
+<li><a class="reference internal" href="#modele-letting">Modèle <code class="docutils literal notranslate"><span class="pre">Letting</span></code></a></li>
+<li><a class="reference internal" href="#modele-profile">Modèle <code class="docutils literal notranslate"><span class="pre">Profile</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#guide-d-utilisation">Guide d’Utilisation</a><ul>
+<li><a class="reference internal" href="#fonctionnalites-principales">Fonctionnalités Principales</a></li>
+<li><a class="reference internal" href="#exemples-d-utilisation">Exemples d’Utilisation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#deploiement">Déploiement</a><ul>
+<li><a class="reference internal" href="#environnement-de-production">Environnement de Production</a></li>
+<li><a class="reference internal" href="#etapes-de-deploiement">Étapes de Déploiement</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="#">OC Lettings Site 1.0 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Welcome to OC Lettings Site’s documentation!</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2023, Mickaël Salmon.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    </div>
+  </body>
+</html>
