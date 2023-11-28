@@ -17,8 +17,8 @@ class ProfileViewTest(TestCase):
 
 
     def test_profile_view(self):
-        response = self.client.get(reverse('profile', args=['testuser']))
+        response = self.client.get(reverse('/profile/', args=['testuser']))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'profile.html')
+        self.assertTemplateUsed(response, 'profiles/profile.html')
         self.assertContains(response, self.user.username)
         self.assertContains(response, self.profile.favorite_city)

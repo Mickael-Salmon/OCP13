@@ -18,9 +18,9 @@ class LettingViewTest(TestCase):
     def test_letting_view(self):
         client = Client()
         letting = Letting.objects.get(id=1)
-        response = client.get(reverse('letting', args=[letting.id]))
+        response = client.get(reverse('/letting/', args=[letting.id]))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'letting.html')
+        self.assertTemplateUsed(response, 'letting/letting.html')
         self.assertContains(response, letting.title)
         self.assertContains(response, letting.address.street)
         self.assertContains(response, letting.address.city)
