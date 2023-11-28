@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'OC Lettings Site'
-copyright = '2023, Mickaël Salmon'
-author = 'Mickaël Salmon'
+project = 'oc_letting_site'
+copyright = '2023, Mickael Salmon'
+author = 'Mickael Salmon'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
@@ -17,12 +17,12 @@ release = '1.0'
 extensions = []
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = []
 
 
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'bizstyle'
+html_theme = 'alabaster'
 html_static_path = ['_static']
