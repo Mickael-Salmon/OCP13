@@ -2,6 +2,7 @@
 from django.urls import reverse
 from letting.models import Letting, Address
 from letting.views import letting
+from django.http import Http404
 
 class LettingViewTest(TestCase):
     @classmethod
@@ -38,8 +39,6 @@ class LettingViewTest(TestCase):
         # Create an instance of a GET request with an invalid letting ID.
         request = self.factory.get(reverse('letting', args=[999]))
 
-        # Use the request to get the response.
-        response = letting(request, 999)
-
-        # Check that the response is 404 Not Found.
-        self.assertEqual(response.status_code, 404)
+        # Use the request to get the response and check for Http404 exception.
+        with self.assertRaises(Http404):
+            _ = letting(request, 999)
