@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to oc_letting_site's documentation!
-===========================================
+Bienvenue sur la documentaton de l'application OC LETTING Site !
+===============================================================
 
 .. toctree::
    :maxdepth: 2
