@@ -1,0 +1,19 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: cimg/python:3.9
+    steps:
+      - checkout
+      - run: echo "Le processus de build commence"
+      - run:
+          name: Installation des Dépendances
+          command: pip install -r requirements.txt
+      - run:
+          name: Exécution des Tests
+          command: python manage.py test
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
