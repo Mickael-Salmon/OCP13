@@ -3,5 +3,13 @@
         "editor.defaultFoldingRangeProvider": "ms-python.black-formatter",
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "esbonio.sphinx.confDir": ""
+    "esbonio.sphinx.confDir": "",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "oc_letting_site",
+            "database": "${workspaceFolder:OCP13}/oc-lettings-site.sqlite3"
+        }
+    ]
 }
