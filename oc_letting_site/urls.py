@@ -8,7 +8,7 @@ def trigger_error(request):
 
 urlpatterns = [
     path("", main_views.index, name="index"),
-    path("lettings/", include("letting.urls")),
+    path("letting/", include("letting.urls")),
     path("profiles/", include("profiles.urls")),
     path('sentry-debug/', trigger_error),
     path("admin/", admin.site.urls),
