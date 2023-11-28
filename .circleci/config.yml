@@ -20,7 +20,7 @@ jobs:
           name: Push de l'Image vers Docker Hub
           command: |
             echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-            docker push <ton_nom_utilisateur_docker_hub>/oc_letting_site:latest
+            docker push mickaelsalmon/oc_letting_site:latest
 workflows:
   version: 2
   build_and_test:
