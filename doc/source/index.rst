@@ -3,18 +3,36 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Bienvenue sur la documentaton de l'application OC LETTING Site !
-===============================================================
+.. _index:
+
+#########################################################
+Bienvenue dans la documentation d'Orange County Lettings!
+#########################################################
+
+.. image:: https://user.oc-static.com/upload/2023/07/20/1689880374259_Orange%20County%20Lettings%20Ad.png
+      :height: 300
+      :width: 600
+      :align: center
+      :alt: Ad_Orange
+
+----
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Sommaire:
+
+   configuration_and_security.rst
+   deployment_and_tests.rst
+   database.rst
+   usage.rst
 
 
+----
 
-Indices and tables
-==================
+Le code entier est en index :doc:`modules`.
+
+* :ref:`modindex`
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
+
