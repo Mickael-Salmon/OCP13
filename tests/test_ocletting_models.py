@@ -1,5 +1,5 @@
 ﻿from django.test import TestCase
-from oc_letting_site.models import Address
+from letting.models import Address
 
 class AddressModelTest(TestCase):
     @classmethod
