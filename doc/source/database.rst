@@ -45,29 +45,6 @@ Il peut être intégré directement dans l'application elle-même.
 Présentation des objets et de l'ERD
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. mermaid::
-
-   erDiagram
-       User ||--o{ Profile : "has"
-       Profile {
-           int id PK
-           string email
-           string name
-       }
-       Letting ||--|{ Address : "located at"
-       Letting {
-           int id PK
-           string title
-           text description
-       }
-       Address {
-           int id PK
-           string street
-           string city
-           string zip_code
-           string country
-       }
-
 .. list-table::
    :header-rows: 1
 
