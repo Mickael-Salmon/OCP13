@@ -27,10 +27,3 @@ Bienvenue dans la documentation d'Orange County Lettings!
    usage.rst
 
 
-----
-
-* :ref:`modindex`
-
-* :ref:`genindex`
-* :ref:`search`
-

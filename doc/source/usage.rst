@@ -1,5 +1,5 @@
-usage
-=====
+Accès et utilisation du site
+============================
 
 .. contents::
    :depth: 4
