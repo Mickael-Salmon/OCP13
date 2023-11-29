@@ -17,7 +17,7 @@ Django settings:
 `Documentation Django <https://docs.djangoproject.com/fr/4.2/ref/settings/>`_
 
 
-**IMPORTANT**
+*IMPORTANT*
 --------------
 
 . Création et Configuration du Fichier .env
@@ -82,7 +82,7 @@ Ton fichier .env ressemblera à ceci :
 `Secret Key documentation <https://docs.djangoproject.com/fr/4.2/ref/settings/#std-setting-SECRET_KEY>`_
 
 
-**DEBUG**
+*DEBUG*
 ---------
 
 .. code-block:: python
@@ -102,7 +102,7 @@ Ton fichier .env ressemblera à ceci :
   vide, Django autorise toutes les adresses, ce qui peut être utile en développement mais pas en production. Ici on a ajouté RENDER en plus des adresses locales.
 
 
-**WhiteNoise**:
+*WhiteNoise*:
 ----------------
 
 `WhiteNoise <https://whitenoise.readthedocs.io/en/latest/django.html>`_
@@ -150,7 +150,7 @@ Afin d'utiliser whitenoise : (à insérer dans settings.py)
 
 
 
-**Sentry**:
+*Sentry*:
 ------------
 
 Sentry est un outil de gestion des erreurs qui se concentre principalement sur la capture des exceptions d'application, telles que les plantages d'application, et non sur la journalisation générale.
@@ -208,7 +208,7 @@ Variable d'environnement stockée dans .env :
 
 `Documentation officielle Sentry Platform Django <https://docs.sentry.io/platforms/python/guides/django>`_
 
-**Gunicorn**:
+*Gunicorn*:
 --------------
 
 Déploiement de Django avec Gunicorn :
@@ -220,7 +220,7 @@ La configuration se trouve dans le fichier *dockerfile*, situé à la racine du 
 
 .. warning::
 
-          Gunicorn s'exécute seulement sous un system UNIX.
+          Gunicorn s'exécute seulement sous un system LINUX/UNIX.
 
 .. code-block:: python
 
@@ -231,7 +231,7 @@ La configuration se trouve dans le fichier *dockerfile*, situé à la racine du 
 
 
 
-**Hébergement en CLOUD - Solution retenue RENDER**
+*Hébergement en CLOUD - Solution retenue RENDER*
 ---------------------------------------------------
 
 
