@@ -8,4 +8,3 @@ config/
 docker-compose.yml
 nginx/
 .env
-```
