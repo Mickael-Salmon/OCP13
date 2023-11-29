@@ -25,5 +25,3 @@ Bienvenue dans la documentation d'Orange County Lettings!
    deployment_and_tests.rst
    database.rst
    usage.rst
-
-

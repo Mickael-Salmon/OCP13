@@ -6,8 +6,8 @@ Base de donnée
    :local:
 
 .. image:: https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg
-      :height: 495
-      :width: 934
+      :height: 250
+      :width: 250
       :alt: SQLite3 logo
 
 .. role:: raw-html(raw)
@@ -69,7 +69,7 @@ Présentation des objets et de l'ERD
 Présentation des modèles
 ------------------------
 
-**Profile : Représentant un client.**
+*Profile : Représentant un client.*
 -------------------------------------
 
 .. list-table::
@@ -83,7 +83,7 @@ Présentation des modèles
           :members:
           :no-index:
 
-**Letting : Représentant une location.**
+*Letting : Représentant une location.*
 ----------------------------------------
 .. list-table::
    :widths: 25 75
@@ -96,7 +96,7 @@ Présentation des modèles
           :members:
           :no-index:
 
-**Address : Représentant une propriété à louer.**
+*Address : Représentant une propriété à louer.*
 -------------------------------------------------
 
 .. list-table::
