@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'oc_letting_site'
+project = 'Documentation Application Django Site Holiday Homes'
 copyright = '2023, Mickael Salmon'
 author = 'Mickael Salmon'
 release = '1.0'
