@@ -1,7 +1,21 @@
-﻿
-{% extends 'base.html' %}
+﻿{% extends "base.html" %}
+{% block title %}error 500{% endblock title %}
 
 {% block content %}
-  <h1>Erreur 500</h1>
-  <p>Une erreur interne du serveur est survenue.</p>
+
+<h5>Pages on site</h5>
+<ul>
+    <li><a href="/" title="">Home</a></li>
+    <li><a href="{% url 'profiles_index' %}" title="Profiles">Profiles</a></li>
+    <li><a href="{% url 'lettings_index' %}" title="Lettings">Lettings</a></li>
+</ul>
+
+<div>
+    <h1>Erreur 500.</h1>
+    <p>
+      Internal Server Error ! <br>
+      The server encountered an unexpected condition that prevented it from fulfilling the request. We apologize for the inconvenience. Please try again later.<br><br>
+    </p>
+</div>
+
 {% endblock %}

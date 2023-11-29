@@ -1,7 +1,43 @@
-﻿
-{% extends 'base.html' %}
+﻿{% extends "base.html" %}
+{% block title %}error 404{% endblock title %}
 
 {% block content %}
-  <h1>Page non trouvée</h1>
-  <p>Désolé, la page que vous recherchez n'a pas été trouvée.</p>
+
+<h5>Pages on site</h5>
+<ul>
+    <li><a href="/" title="">Home</a></li>
+    <li><a href="{% url 'profiles_index' %}" title="Profiles">Profiles</a></li>
+    <li><a href="{% url 'lettings_index' %}" title="Lettings">Lettings</a></li>
+</ul>
+
+<section>
+    <h1>Error 404.</h1>
+    <p>
+        Oops, looks like the page is on vacation. <br>
+        Maybe it's sipping margaritas on a beach somewhere.<br><br>
+        In the meantime, how about you go back to the homepage and plan your own vacation? :
+    </p>
+
+    <div>
+        <form>
+            <input type="text" placeholder="Type your search here" id="in"
+                   style="width:70%;margin-left:5rem">
+            <span id="search" onclick="getValue();" style="padding:5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </span>|
+            <button type="reset">X</button>
+            <script>
+                function getValue() {
+                var input = document.getElementById("in").value;
+                var url='https://www.google.com/search?q=' + input;
+                window.open('https://www.google.com/search?q=' + input);
+            }
+            </script>
+        </form>
+    </div>
+</section>
+
+
 {% endblock %}
