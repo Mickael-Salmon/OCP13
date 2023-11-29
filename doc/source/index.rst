@@ -29,8 +29,6 @@ Bienvenue dans la documentation d'Orange County Lettings!
 
 ----
 
-Le code entier est en index :doc:`modules`.
-
 * :ref:`modindex`
 
 * :ref:`genindex`
