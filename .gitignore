@@ -7,4 +7,5 @@ Dockerfile.nginx
 config/
 docker-compose.yml
 nginx/
+.env
 ```

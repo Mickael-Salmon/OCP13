@@ -18,6 +18,7 @@ esbonio==0.16.2
 exceptiongroup==1.1.3
 flake8==3.7.0
 furo==2023.9.10
+gunicorn==21.2.0
 idna==3.4
 imagesize==1.4.1
 importlib-metadata==6.8.0
@@ -40,6 +41,7 @@ Pygments==2.17.1
 pyspellchecker==0.7.2
 pytest==7.4.3
 pytest-django==3.9.0
+python-decouple==3.8
 pytz==2023.3.post1
 requests==2.31.0
 sentry-sdk==1.35.0

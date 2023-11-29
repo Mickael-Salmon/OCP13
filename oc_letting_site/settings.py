@@ -1,13 +1,17 @@
 import os
 import sentry_sdk
 from pathlib import Path
+from decouple import config
+from decouple import AutoConfig
+
+config = AutoConfig(search_path=None)  # Charger automatiquement le fichier .env
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 sentry_sdk.init(
-    dsn="https://25cd705cb64e1d1dbe8d792b4425271c@o4506162192318464.ingest.sentry.io/4506241528168448",
+    dsn=config('SENTRY_DSN', default=""),
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
     traces_sample_rate=1.0,
@@ -21,7 +25,7 @@ sentry_sdk.init(
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "fp$9^593hsriajg$_%=5trot9g!1qa@ew(o-1#@=&4%=hp46(s"
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
