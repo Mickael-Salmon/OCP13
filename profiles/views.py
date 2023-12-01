@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from profiles.models import Profile
 
+
 def profiles_index(request):
     profiles_list = Profile.objects.all()
     context = {"profiles_list": profiles_list}

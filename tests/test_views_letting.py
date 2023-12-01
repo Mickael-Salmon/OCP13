@@ -4,7 +4,9 @@ from letting.models import Letting, Address
 from letting.views import letting
 from django.http import Http404
 
+
 class LettingViewTest(TestCase):
+
     @classmethod
     def setUpTestData(cls):
         # Set up non-modified objects used by all test methods

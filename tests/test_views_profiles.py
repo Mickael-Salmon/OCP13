@@ -3,6 +3,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from profiles.models import Profile
 
+
 class ProfileViewTest(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='testuser1', password='testpassword')
@@ -11,7 +12,6 @@ class ProfileViewTest(TestCase):
 
     def tearDown(self):
         User.objects.filter(username='testuser1').delete()
-
 
     def test_profile_view(self):
         # Create a client to make requests

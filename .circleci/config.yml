@@ -8,10 +8,14 @@ jobs:
       - run: echo "Le processus de build commence"
       - run:
           name: Installation des Dépendances
-          command: pip install -r requirements.txt
+          command: |
+            pip install -r requirements.txt
+            pip install coverage
       - run:
-          name: Exécution des Tests
-          command: python manage.py test
+          name: Exécution des Tests et rapport de couverture
+          command: |
+            coverage run -m pytest
+            coverage report
       - setup_remote_docker
       - run:
           name: Construction de l'Image Docker

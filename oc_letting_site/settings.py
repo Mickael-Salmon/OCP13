@@ -1,7 +1,6 @@
 import os
 import sentry_sdk
 from pathlib import Path
-from decouple import config
 from decouple import AutoConfig
 
 config = AutoConfig(search_path=None)  # Charger automatiquement le fichier .env
@@ -32,8 +31,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'oc-letting-site.onrender.com']
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -53,8 +50,9 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'  # Tell nose to measure coverage
 NOSE_ARGS = [
     '--with-coverage',  # Specify that you want a coverage report
     '--cover-package=oc_letting_site',  # Replace "your_app_name" with the name of the app you want to cover
-    '--cover-html', # Supports HTML outputs
+    '--cover-html',  # Supports HTML outputs
 ]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -87,7 +85,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "oc_letting_site.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -97,7 +94,6 @@ DATABASES = {
         "NAME": os.path.join(BASE_DIR, "oc-lettings-site.sqlite3"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

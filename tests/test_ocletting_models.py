@@ -1,6 +1,7 @@
 ﻿from django.test import TestCase
 from letting.models import Address
 
+
 class AddressModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
@@ -43,7 +44,6 @@ class AddressModelTest(TestCase):
         address = Address.objects.get(id=1)
         field_label = address._meta.get_field('country_iso_code').verbose_name
         self.assertEqual(field_label, 'country iso code')
-
 
     def test_number_max_value(self):
         address = Address.objects.get(id=1)

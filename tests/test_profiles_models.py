@@ -2,6 +2,7 @@
 from django.contrib.auth import get_user_model
 from profiles.models import Profile
 
+
 class ProfileModelTest(TestCase):
 
     @classmethod
