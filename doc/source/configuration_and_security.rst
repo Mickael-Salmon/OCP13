@@ -208,8 +208,14 @@ Variable d'environnement stockée dans .env :
 
 `Documentation officielle Sentry Platform Django <https://docs.sentry.io/platforms/python/guides/django>`_
 
+*WSGI*
+-------
+Le WSGI (Web Server Gateway Interface) est une norme de serveur web pour les applications Python. En ce qui concerne Django, WSGI définit comment un serveur web peut communiquer avec une application Django. L'objet clé dans le déploiement avec WSGI est l'objet exécutable "application" que le serveur d'applications utilise pour communiquer avec votre code.
+Django crée un fichier wsgi.py qui contient cet objet et qui est utilisé par les déploiements WSGI en production.
+
 *Gunicorn*:
 --------------
+Non mise en place dans le cadre de ce projet.Toutefois voici quelques informations sur Gunicorn si vous souhaitez l'utiliser.
 
 Déploiement de Django avec Gunicorn :
 
