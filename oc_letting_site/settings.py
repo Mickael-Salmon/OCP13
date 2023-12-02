@@ -11,16 +11,33 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SENTRY_DSN = config('SENTRY_DSN', default="")
+def profiles_sampler(sampling_context):
+    # ...
+    # return a number between 0 and 1 or a boolean
+    return True
 
 sentry_sdk.init(
-    dsn=SENTRY_DSN,
-    integrations=[DjangoIntegration()],
+    dsn=os.environ.get('SENTRY_DSN'),
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
     # We recommend adjusting this value in production.
     traces_sample_rate=1.0,
-    # If you wish to associate users to errors (assuming you are using
-    # django.contrib.auth) you may enable sending PII data.
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
+
+    # Alternatively, to control sampling dynamically
+    profiles_sampler=profiles_sampler,
+
+    integrations=[
+        DjangoIntegration(
+            transaction_style='url',
+            middleware_spans=True,
+            signals_spans=True,
+            cache_spans=True,
+        ),
+    ],
     send_default_pii=True
 )
 
