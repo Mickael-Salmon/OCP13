@@ -17,7 +17,7 @@ def profiles_sampler(sampling_context):
     return True
 
 sentry_sdk.init(
-    dsn=os.environ.get('SENTRY_DSN'),
+    dsn='https://25cd705cb64e1d1dbe8d792b4425271c@o4506162192318464.ingest.sentry.io/4506241528168448',
     # Set traces_sample_rate to 1.0 to capture 100%
     # of transactions for performance monitoring.
     # We recommend adjusting this value in production.
