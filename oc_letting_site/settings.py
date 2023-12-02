@@ -5,13 +5,12 @@ from pathlib import Path
 from decouple import AutoConfig
 
 config = AutoConfig(search_path=None)  # Charger automatiquement le fichier .env
+SENTRY_DSN = config('SENTRY_DSN', default="")
+SECRET_KEY = config('SECRET_KEY')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-SENTRY_DSN = config('SENTRY_DSN', default="")
-
 
 def profiles_sampler(sampling_context):
     # ...
@@ -47,9 +46,6 @@ sentry_sdk.init(
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
