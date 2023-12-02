@@ -1,5 +1,5 @@
-﻿# Utilisation de l'image officielle Python 3.9
-FROM python:3.9
+﻿# Utilisation de l'image officielle Python 3.12
+FROM python:3.12
 
 # Définition de l'environnement pour empêcher Python de générer des fichiers .pyc dans le conteneur
 ENV PYTHONUNBUFFERED 1
@@ -19,9 +19,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copie du reste des fichiers du projet dans le conteneur
 COPY . /code/
 
-# Add the collectstatic command
+# Exécution de collectstatic
 RUN python manage.py collectstatic --noinput
 
-# Commande pour exécuter l'application
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
-
+# Commande pour exécuter l'application avec Gunicorn
+CMD ["gunicorn", "oc_letting_site.wsgi:application", "--bind", "0.0.0.0:8000"]

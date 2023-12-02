@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "oc_letting_site",
     "profiles",
     "letting",
-    "django_nose",
+    # "django_nose",
     "django_coverage",
 ]
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'  # Tell nose to measure coverage on specific apps
@@ -56,13 +56,13 @@ NOSE_ARGS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "oc_letting_site.urls"
@@ -123,7 +123,7 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_L10N = True
+# USE_L10N = True
 
 USE_TZ = True
 
