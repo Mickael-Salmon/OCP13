@@ -11,6 +11,9 @@ jobs:
           command: |
             pip install -r requirements.txt
       - run:
+          name: Collecte des Fichiers Statiques
+          command: python manage.py collectstatic --noinput
+      - run:
           name: Vérification du Linting avec Flake8
           command: flake8 .
       - run:
@@ -18,6 +21,10 @@ jobs:
           command: |
             coverage run -m pytest tests/*.*
             coverage report
+      - run:
+          name: Test de Gunicorn
+          command: |
+            gunicorn --check-config oc_letting_site.wsgi:application
       - setup_remote_docker
       - run:
           name: Construction de l'Image Docker
