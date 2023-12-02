@@ -10,6 +10,9 @@ jobs:
       - checkout
       - run: echo "Le processus de build commence"
       - run:
+          name: Print SENTRY_DSN
+          command: echo $SENTRY_DSN
+      - run:
           name: Installation des Dépendances
           command: |
             pip install -r requirements.txt
