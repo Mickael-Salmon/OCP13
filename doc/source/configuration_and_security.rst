@@ -66,7 +66,7 @@ python
     )
 
 3. Utilisation des Variables d'Environnement dans CircleCI
-Pour que CircleCI utilise ces variables, ajoute-les dans les paramètres de ton projet sur CircleCI.
+Pour que CircleCI utilise ces variables, ells doivent être ajoutées sur CircleCI.
 Il va les récupérer lors de la construction et du déploiement.
 
 4. Exemple de Fichier .env
@@ -210,14 +210,18 @@ Variable d'environnement stockée dans .env :
 
 *WSGI*
 -------
-Le WSGI (Web Server Gateway Interface) est une norme de serveur web pour les applications Python. En ce qui concerne Django, WSGI définit comment un serveur web peut communiquer avec une application Django. L'objet clé dans le déploiement avec WSGI est l'objet exécutable "application" que le serveur d'applications utilise pour communiquer avec votre code.
+Le WSGI (Web Server Gateway Interface) est une norme de serveur web pour les applications Python.
+En ce qui concerne Django, WSGI définit comment un serveur web peut communiquer avec une application Django.
+L'objet clé dans le déploiement avec WSGI est l'objet exécutable "application" que le serveur d'applications utilise pour communiquer avec votre code.
+
 Django crée un fichier wsgi.py qui contient cet objet et qui est utilisé par les déploiements WSGI en production.
 
 *Gunicorn*:
 --------------
-Non mise en place dans le cadre de ce projet.Toutefois voici quelques informations sur Gunicorn si vous souhaitez l'utiliser.
 
 Déploiement de Django avec Gunicorn :
+
+Nous utilisons Gunicorn comme serveur web pour déployer notre application Django.
 
 `Gunicorn <https://gunicorn.org/>`_ (« Green Unicorn ») Gunicorn est un serveur web HTTP pour UNIX, utilisé principalement pour servir des applications Python via l'interface WSGI (Web Server Gateway Interface). Il s'agit d'un serveur pré-fork, ce qui signifie qu'il crée un ensemble de processus de travail au démarrage pour gérer les requêtes. Gunicorn est compatible avec divers frameworks web, léger en termes de ressources serveur et assez rapide.
 Il est souvent utilisé en combinaison avec des serveurs proxy HTTP tels que Nginx pour améliorer les performances.
@@ -233,7 +237,12 @@ La configuration se trouve dans le fichier *dockerfile*, situé à la racine du 
                     CMD gunicorn --bind=0.0.0.0:8080 --timeout 200 oc_lettings_site.wsgi
 
 
+Nous avons un fichier de config à la racine pour Gunicorn, nommé *gunicorn.conf.py* :
 
+.. code-block:: python
+
+                    workers = 3
+                    bind = '0.0.0.0:8000'
 
 
 
